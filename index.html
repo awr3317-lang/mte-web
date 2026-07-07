@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Muara Teknik Elektrik - Custom Transformer Rectifier Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mtenavy: '#0B1121', /* Navy Gelap */
+                        mteblue: '#2563EB', /* Biru Elektrik (CTA) */
+                        mtelight: '#F8FAFC', /* Abu-abu sangat terang */
+                        mtegray: '#475569', /* Abu-abu netral teks */
+                    },
+                    backgroundImage: {
+                        'blueprint': 'radial-gradient(#2563eb33 1px, transparent 1px)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-blueprint { background-size: 20px 20px; }
+    </style>
+    <style>
+    .bg-blueprint { background-size: 20px 20px; }
+    
+    /* Efek elegan untuk foto */
+    .hero-image-frame {
+        transition: all 0.5s ease-out;
+        border-radius: 8px; /* Sudut lembut */
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        filter: brightness(1.02) contrast(1.05); /* Sedikit pop warna */
+    }
+    
+    /* Animasi muncul pelan saat web dimuat */
+    .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-white selection:bg-mteblue selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 fixed w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo Header -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html">
+                        <img src="logo with frame.svg" alt="Logo PT Muara Teknik Elektrik" class="h-16 w-auto">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-6 items-center text-sm font-medium">
+                    <a href="index.html" class="text-mteblue border-b-2 border-mteblue pb-1">Home</a>
+                    <a href="solutions.html" class="text-mtegray hover:text-mteblue transition">Solutions</a>
+                    <a href="about.html" class="text-mtegray hover:text-mteblue transition">About Us</a>
+                    <a href="portfolio.html" class="text-mtegray hover:text-mteblue transition">Portfolio</a>
+                    <a href="articles.html" class="text-mtegray hover:text-mteblue transition">Articles</a>
+                    <a href="#rfq" class="bg-mtenavy hover:bg-mteblue text-white px-5 py-2.5 rounded-sm transition duration-300">Request Quotation</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-mtegray hover:text-mteblue focus:outline-none p-2">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200 shadow-lg absolute w-full">
+            <div class="px-4 pt-4 pb-6 space-y-2 text-sm font-medium">
+                <a href="index.html" class="block px-4 py-3 text-mteblue bg-blue-50 rounded-sm">Home</a>
+                <a href="solutions.html" class="block px-4 py-3 text-mtegray hover:text-mteblue hover:bg-gray-50 rounded-sm">Solutions</a>
+                <a href="#how-it-works" class="block px-4 py-3 text-mtegray hover:text-mteblue hover:bg-gray-50 rounded-sm">About Us</a>
+                <a href="portfolio.html" class="block px-4 py-3 text-mtegray hover:text-mteblue hover:bg-gray-50 rounded-sm">Portfolio</a>
+                <a href="articles.html" class="block px-4 py-3 text-mtegray hover:text-mteblue hover:bg-gray-50 rounded-sm">Articles</a>
+                <a href="#rfq" class="block px-4 py-3 text-white bg-mtenavy hover:bg-mteblue rounded-sm text-center mt-4">Request Quotation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-mtelight border-b border-gray-200 overflow-hidden">
+        <!-- Blueprint subtle background -->
+        <div class="absolute inset-0 bg-blueprint opacity-40"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-mteblue font-bold tracking-widest uppercase text-xs mb-4">Custom Engineering Solution</p>
+                <h1 class="text-4xl lg:text-5xl font-extrabold text-mtenavy leading-tight mb-6">
+                    Solusi Trafo Rectifier Andal untuk Industri Electroplating.
+                </h1>
+                <p class="text-lg text-mtegray mb-8 leading-relaxed max-w-xl">
+                    PT Muara Teknik Elektrik menyediakan trafo rectifier air cooled dan oil cooled yang dapat dikustom sesuai kebutuhan electroplating, anodizing, dan galvanizing di seluruh Indonesia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#rfq" class="bg-mteblue hover:bg-blue-700 text-white px-8 py-3.5 rounded-sm font-semibold text-center transition duration-300 shadow-lg shadow-blue-500/30">Request Quotation</a>
+                    <a href="solutions.html" class="bg-white border border-gray-300 hover:border-mteblue text-mtegray hover:text-mteblue px-8 py-3.5 rounded-sm font-semibold text-center transition duration-300">View Our Solutions</a>
+                </div>
+            </div>
+            <!-- Minimalist Tech Frame Placeholder -->
+            <!-- Ganti Placeholder dengan foto asli -->
+<div class="hidden md:flex h-96 w-full items-center justify-center relative p-4 fade-in-up">
+    <div class="w-full h-full relative group">
+        <div class="absolute -top-2 -left-2 w-10 h-10 border-t-2 border-l-2 border-mteblue"></div>
+        <div class="absolute -bottom-2 -right-2 w-10 h-10 border-b-2 border-r-2 border-mteblue"></div>
+        
+        <img src="1782988804317.png" alt="Custom Transformer Rectifier MTE" class="hero-image-frame w-full h-full object-contain bg-white">
+    </div>
+</div>
+            
+        </div>
+    </section>
+
+<!-- Industrial Applications (Flipped Cards) -->
+<section id="applications" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <p class="text-mteblue font-bold tracking-widest uppercase text-xs mb-3">Application Experience</p>
+            <h2 class="text-3xl font-bold text-mtenavy mb-4">Industrial Applications</h2>
+            <p class="text-mtegray max-w-2xl mx-auto">Arahkan kursor ke kartu di bawah untuk melihat detail instalasi.</p>
+        </div>
+        
+        <!-- Grid Container -->
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Kartu 1: Electroplating -->
+            <div class="group h-80 w-full [perspective:1000px]">
+                <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    <!-- Sisi Depan -->
+                    <div class="absolute inset-0 border border-gray-200 p-8 bg-white [backface-visibility:hidden] flex flex-col justify-center shadow-sm">
+                        <h3 class="text-2xl font-bold text-mtenavy mb-4">Electroplating Line</h3>
+                        <p class="text-mtegray text-sm">Menjamin ketebalan dan kualitas pelapisan logam yang seragam melalui output arus DC yang sangat presisi.</p>
+                    </div>
+                    <!-- Sisi Belakang -->
+                    <div class="absolute inset-0 h-full w-full [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden shadow-xl">
+                        <img src="https://via.placeholder.com/400x320?text=Electroplating+Sample" alt="Electroplating" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kartu 2: Anodizing -->
+            <div class="group h-80 w-full [perspective:1000px]">
+                <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    <div class="absolute inset-0 border border-gray-200 p-8 bg-white [backface-visibility:hidden] flex flex-col justify-center shadow-sm">
+                        <h3 class="text-2xl font-bold text-mtenavy mb-4">Anodizing Process</h3>
+                        <p class="text-mtegray text-sm">Mendukung rekayasa tegangan dan waktu yang spesifik untuk pembentukan lapisan oksida protektif pada aluminium.</p>
+                    </div>
+                    <div class="absolute inset-0 h-full w-full [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden shadow-xl">
+                        <img src="https://via.placeholder.com/400x320?text=Anodizing+Sample" alt="Anodizing" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kartu 3: Galvanizing -->
+            <div class="group h-80 w-full [perspective:1000px]">
+                <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    <div class="absolute inset-0 border border-gray-200 p-8 bg-white [backface-visibility:hidden] flex flex-col justify-center shadow-sm">
+                        <h3 class="text-2xl font-bold text-mtenavy mb-4">Galvanizing Process</h3>
+                        <p class="text-mtegray text-sm">Dirancang khusus untuk keandalan maksimal dalam menahan beban ampere raksasa pada pelapisan anti-karat.</p>
+                    </div>
+                    <div class="absolute inset-0 h-full w-full [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden shadow-xl">
+                        <img src="https://via.placeholder.com/400x320?text=Galvanizing+Sample" alt="Galvanizing" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Pain Points Section (The Pain & The Cure) -->
+    <section class="py-20 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-mtenavy mb-4">Masih Membiarkan Mesin Rectifier Menjadi "Bom Waktu" di Pabrik Anda?</h2>
+                <p class="text-mtegray text-lg">Dalam industri electroplating, satu kesalahan voltase adalah kerugian yang tidak bisa diperbaiki.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-mtelight p-8 border-t-4 border-mteblue shadow-sm hover:shadow-md transition">
+                    <h3 class="font-bold text-mtenavy mb-4 text-xl italic">"Reject produksi bukan lagi sekadar angka."</h3>
+                    <p class="text-mtegray leading-relaxed">Satu produk gagal akibat arus tidak stabil berarti pemborosan bahan kimia, listrik, dan waktu. MTE memberikan solusi <em>Stable DC Output</em> yang dirancang presisi untuk meminimalisir angka <em>reject</em> hingga titik nol.</p>
+                </div>
+                <!-- Point 2 -->
+                <div class="bg-mtelight p-8 border-t-4 border-mteblue shadow-sm hover:shadow-md transition">
+                    <h3 class="font-bold text-mtenavy mb-4 text-xl italic">"Menunggu spare part impor = Berhenti produksi total."</h3>
+                    <p class="text-mtegray leading-relaxed">Berhenti operasional karena mesin impor rusak adalah kerugian finansial masif. Sebagai pabrikan lokal, MTE memastikan dukungan teknis dan suku cadang tersedia di gudang kami, bukan di luar negeri.</p>
+                </div>
+                <!-- Point 3 -->
+                <div class="bg-mtelight p-8 border-t-4 border-mteblue shadow-sm hover:shadow-md transition">
+                    <h3 class="font-bold text-mtenavy mb-4 text-xl italic">"Mesin 'pasaran' seringkali menguras efisiensi pabrik."</h3>
+                    <p class="text-mtegray leading-relaxed">Membeli mesin *off-the-shelf* yang tidak sesuai spesifikasi tangki hanya akan menyiksa tagihan listrik Anda. MTE merekayasa kapasitas yang presisi, memastikan investasi Anda tidak terbuang sia-sia.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#rfq" class="inline-block bg-mtenavy hover:bg-mteblue text-white px-10 py-4 font-bold rounded-sm transition text-lg shadow-xl">
+                    Hentikan Kerugian Sekarang & Konsultasikan Kebutuhan Anda
+                </a>
+            </div>
+        </div>
+    </section>
+       <!-- Product & Solution Overview (Capabilities) -->
+    <section id="products" class="py-24 bg-mtenavy text-white relative">
+        <!-- Technical Accent Lines -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-mteblue to-transparent opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 md:w-2/3">
+                <p class="text-mteblue font-bold tracking-widest uppercase text-xs mb-3">Custom Engineered</p>
+                <h2 class="text-3xl font-bold text-white mb-6">Product & Solution Overview</h2>
+                <p class="text-gray-400 text-lg">Dirancang secara modular untuk menyesuaikan kapasitas ruang, anggaran, dan skala beban operasional pabrik Anda.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Air Cooled Card -->
+                <div class="bg-[#121A2F] border border-gray-800 p-10 hover:border-mteblue transition duration-300 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Air Cooled Transformer Rectifier</h3>
+                    <p class="text-gray-400 mb-8 flex-grow leading-relaxed">
+                        Transformer rectifier dengan sistem pendinginan udara untuk aplikasi industri yang membutuhkan desain ringkas serta konfigurasi output DC yang dapat disesuaikan.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <h4 class="text-xs uppercase font-bold text-gray-500 tracking-wider">Konfigurasi Tersedia:</h4>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Custom voltage and current output</li>
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Diode atau SCR / thyristor configuration</li>
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Manual atau semi-auto control system</li>
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Sangat cocok untuk kebutuhan electroplating</li>
+                        </ul>
+                    </div>
+                    <a href="solutions.html" class="inline-flex items-center text-mteblue font-semibold hover:text-white transition mt-auto">
+                        Discuss Your Requirement 
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Oil Cooled Card -->
+                <div class="bg-[#121A2F] border border-gray-800 p-10 hover:border-mteblue transition duration-300 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Oil Cooled Transformer Rectifier</h3>
+                    <p class="text-gray-400 mb-8 flex-grow leading-relaxed">
+                        Transformer rectifier dengan sistem pendinginan minyak untuk kebutuhan operasi industri yang memerlukan kapasitas lebih besar dan kestabilan kerja dalam durasi panjang.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <h4 class="text-xs uppercase font-bold text-gray-500 tracking-wider">Konfigurasi Tersedia:</h4>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Custom-built based on project requirement</li>
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Higher-capacity industrial application</li>
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Stable DC output untuk durasi panjang</li>
+                            <li class="flex items-start"><span class="text-mteblue mr-3 font-bold mt-0.5">■</span> Ketahanan maksimal untuk heavy-duty operation</li>
+                        </ul>
+                    </div>
+                    <a href="solutions.html" class="inline-flex items-center text-mteblue font-semibold hover:text-white transition mt-auto">
+                        Discuss Your Requirement 
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works & Why Choose Us -->
+<section id="experience" class="py-24 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Sisi Portofolio (Bukti Nyata) -->
+            <div>
+                <p class="text-mteblue font-bold tracking-widest uppercase text-xs mb-3">Proof of Work</p>
+                <h2 class="text-3xl font-bold text-mtenavy mb-6">Proven Application Experience</h2>
+                <div class="space-y-6">
+                    <div class="p-6 border-l-4 border-mteblue bg-mtelight">
+                        <h4 class="font-bold text-mtenavy mb-2">Electroplating Success</h4>
+                        <p class="text-sm text-mtegray">Berhasil melakukan kustomisasi rectifier untuk lini produksi otomotif dengan stabilitas output DC 99.8%.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-mteblue bg-mtelight">
+                        <h4 class="font-bold text-mtenavy mb-2">Heavy-Duty Galvanizing</h4>
+                        <p class="text-sm text-mtegray">Penyediaan unit Oil Cooled berkapasitas 5000A untuk operasional 24/7 di pabrik baja nasional.</p>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="inline-block mt-8 text-mteblue font-semibold hover:underline">Lihat Seluruh Portofolio &rarr;</a>
+            </div>
+            
+            <!-- Sisi Why Choose Us (Kualitas) -->
+            <div class="bg-mtenavy p-10 text-white rounded-sm shadow-2xl">
+                <h2 class="text-2xl font-bold mb-8">Why Choose MTE?</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="text-mteblue mr-4">✔</span>
+                        <div><strong class="block text-white">Custom Engineering</strong><span class="text-sm text-gray-400">Desain spesifik sesuai parameter teknis pabrik Anda.</span></div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-mteblue mr-4">✔</span>
+                        <div><strong class="block text-white">Local Agility</strong><span class="text-sm text-gray-400">Respons cepat, konsultasi teknis, dan spare part siap di Bekasi.</span></div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-mteblue mr-4">✔</span>
+                        <div><strong class="block text-white">Heavy-Duty Certified</strong><span class="text-sm text-gray-400">Unit dirancang tahan kondisi korosif dan operasional ekstrem.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How We Work Section -->
+<section id="how-it-works" class="py-24 bg-mtelight border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <p class="text-mteblue font-bold tracking-widest uppercase text-xs mb-3">Professional Workflow</p>
+            <h2 class="text-3xl font-bold text-mtenavy mb-4">Proses Kerja Kami</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-5 gap-4">
+            <!-- Step 1 -->
+            <div class="text-center p-6 bg-white border border-gray-200 shadow-sm relative group hover:border-mteblue transition">
+                <div class="w-12 h-12 bg-mteblue text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg group-hover:scale-110 transition">1</div>
+                <h4 class="font-bold text-mtenavy text-sm mb-2">Submit Requirements</h4>
+                <p class="text-xs text-mtegray">Kirim detail teknis atau spesifikasi proyek.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="text-center p-6 bg-white border border-gray-200 shadow-sm relative group hover:border-mteblue transition">
+                <div class="w-12 h-12 bg-mteblue text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg group-hover:scale-110 transition">2</div>
+                <h4 class="font-bold text-mtenavy text-sm mb-2">Technical Review</h4>
+                <p class="text-xs text-mtegray">Analisis mendalam oleh tim engineer kami.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="text-center p-6 bg-white border border-gray-200 shadow-sm relative group hover:border-mteblue transition">
+                <div class="w-12 h-12 bg-mteblue text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg group-hover:scale-110 transition">3</div>
+                <h4 class="font-bold text-mtenavy text-sm mb-2">Recommendation</h4>
+                <p class="text-xs text-mtegray">Proposal teknis dan penawaran harga resmi.</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="text-center p-6 bg-white border border-gray-200 shadow-sm relative group hover:border-mteblue transition">
+                <div class="w-12 h-12 bg-mteblue text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg group-hover:scale-110 transition">4</div>
+                <h4 class="font-bold text-mtenavy text-sm mb-2">Production & QC</h4>
+                <p class="text-xs text-mtegray">Manufaktur presisi dengan pengujian ketat.</p>
+            </div>
+            <!-- Step 5 -->
+            <div class="text-center p-6 bg-white border border-gray-200 shadow-sm relative group hover:border-mteblue transition">
+                <div class="w-12 h-12 bg-mteblue text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg group-hover:scale-110 transition">5</div>
+                <h4 class="font-bold text-mtenavy text-sm mb-2">Delivery & Support</h4>
+                <p class="text-xs text-mtegray">Pengiriman dan dukungan teknis berkelanjutan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Urgency Pain Point Section -->
+<section class="py-16 bg-gradient-to-br from-mtenavy to-blue-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl lg:text-4xl font-extrabold mb-6 leading-tight">
+            Setiap Hari Anda Menunda, Kerugian Produksi Terus Menumpuk.
+        </h2>
+        <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+            Dalam industri pelapisan logam, mesin yang tidak efisien bukanlah sekadar alat—itu adalah pemborosan biaya operasional. Jangan biarkan ketidakpastian voltase menghambat kapasitas produksi Anda dan menguras margin keuntungan lebih dalam.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <div class="flex items-center text-sm font-medium">
+                <span class="mr-2">⚡</span> Konsultasi teknis cepat & presisi
+            </div>
+            <div class="flex items-center text-sm font-medium">
+                <span class="mr-2">🛡️</span> Solusi lokal, spare part selalu tersedia
+            </div>
+        </div>
+        <div class="mt-10">
+            <a href="#rfq" class="inline-block bg-white text-mtenavy hover:bg-mteblue hover:text-white px-10 py-4 font-bold rounded-sm transition text-lg shadow-2xl animate-pulse">
+                Ambil Tindakan: Request Quotation Sekarang
+            </a>
+            <p class="mt-4 text-xs text-gray-400 italic">Tim kami siap merespons kebutuhan Anda dalam 1x24 jam.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Comprehensive RFQ Form Section -->
+    <section id="rfq" class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-mtenavy mb-4">Request Quotation</h2>
+                <p class="text-mtegray text-lg max-w-2xl mx-auto">Silakan lengkapi spesifikasi awal proyek Anda di bawah ini. Tim engineering kami akan menghubungi Anda dalam maksimal 1 hari kerja untuk konsultasi lebih lanjut.</p>
+            </div>
+
+            <!-- Formspree Endpoint -->
+            <form action="https://formspree.io/f/xaqglwnd" method="POST" enctype="multipart/form-data" class="bg-mtelight border border-gray-200 p-8 md:p-12 rounded-sm shadow-sm">
+                <input type="hidden" name="_next" value="https://web-mte-custom.netlify.app/thank-you.html">
+
+                <!-- Identitas -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-bold text-mtenavy border-b border-gray-300 pb-2 mb-6">1. Informasi Kontak</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap *</label>
+                            <input type="text" name="Nama" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nama Perusahaan *</label>
+                            <input type="text" name="Perusahaan" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp *</label>
+                            <input type="tel" name="WhatsApp" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Perusahaan *</label>
+                            <input type="email" name="Email" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Lokasi Proyek / Kota *</label>
+                            <input type="text" name="Lokasi" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spesifikasi Teknis -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-bold text-mtenavy border-b border-gray-300 pb-2 mb-6">2. Spesifikasi Kebutuhan Proyek</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Industri -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Industri / Aplikasi *</label>
+                            <select name="Industri" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white text-gray-700">
+                                <option value="" disabled selected>Pilih Aplikasi Industri...</option>
+                                <option value="Electroplating">Electroplating</option>
+                                <option value="Anodizing">Anodizing</option>
+                                <option value="Galvanizing">Galvanizing</option>
+                                <option value="Lainnya">Lainnya / Butuh Konsultasi</option>
+                            </select>
+                        </div>
+                        <!-- Produk Diminati -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Produk yang Diminati *</label>
+                            <select name="Produk" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white text-gray-700">
+                                <option value="" disabled selected>Pilih Kategori Produk...</option>
+                                <option value="Transformer Rectifier">Transformer Rectifier</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <!-- Voltase & Ampere -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Required DC Voltage</label>
+                            <input type="text" name="Voltage" placeholder="Contoh: 12V / 24V / Belum Yakin" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Required DC Current (Ampere)</label>
+                            <input type="text" name="Ampere" placeholder="Contoh: 1000A / 5000A / Belum Yakin" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                        </div>
+                        <!-- Komponen Khusus -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Cooling Type</label>
+                            <select name="Cooling_Type" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white text-gray-700">
+                                <option value="Belum Yakin">Belum Yakin</option>
+                                <option value="Air Cooled">Air Cooled</option>
+                                <option value="Oil Cooled">Oil Cooled</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Rectifier Type</label>
+                            <select name="Rectifier_Type" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white text-gray-700">
+                                <option value="Belum Yakin">Belum Yakin</option>
+                                <option value="Diode Rectifier">Diode Rectifier</option>
+                                <option value="SCR / Thyristor">SCR / Thyristor Rectifier</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Control System</label>
+                            <select name="Control_System" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white text-gray-700">
+                                <option value="Belum Yakin">Belum Yakin</option>
+                                <option value="Manual">Manual</option>
+                                <option value="Semi-auto">Semi-auto</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Estimasi Unit</label>
+                                <input type="number" name="Jumlah_Unit" min="1" placeholder="1" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Target Waktu</label>
+                                <input type="text" name="Target_Waktu" placeholder="Bulan/Tahun" class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dokumen & Pesan -->
+                <div>
+                    <h3 class="text-lg font-bold text-mtenavy border-b border-gray-300 pb-2 mb-6">3. Lampiran Pendukung</h3>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Upload Dokumen (Opsional)</label>
+                        <div class="border-2 border-dashed border-gray-300 p-6 text-center bg-white">
+                            <input type="file" name="Attachment" accept=".pdf, .jpg, .jpeg, .png, .doc, .docx, .xls, .xlsx" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-mteblue hover:file:bg-blue-100 cursor-pointer">
+                            <p class="text-xs text-gray-400 mt-2">Format: PDF, JPG, PNG, DOCX, XLSX (Maks. 10-20 MB)</p>
+                            <p class="text-xs text-gray-400">Silakan unggah datasheet, gambar panel, layout proyek, atau spesifikasi kebutuhan.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Pesan Tambahan / Kebutuhan Khusus *</label>
+                        <textarea name="Pesan" rows="4" required class="w-full border border-gray-300 p-3 text-sm focus:border-mteblue outline-none bg-white" placeholder="Jelaskan pertanyaan teknis atau kondisi lapangan pabrik Anda di sini..."></textarea>
+                    </div>
+
+                    <!-- Hidden Input for Formspree Success Redirect (Bisa diaktifkan nanti) -->
+                    <!-- <input type="hidden" name="_next" value="https://domain-mte.com/thank-you.html"> -->
+                    <!-- Anti-spam honeypot (Formspree feature) -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="w-full bg-mteblue hover:bg-blue-700 text-white font-bold py-4 px-8 transition duration-300 rounded-sm text-lg shadow-lg">
+                        Kirim Permintaan Quotation
+                    </button>
+                    <p class="text-xs text-center text-gray-500 mt-4">Dengan mengirimkan form ini, Anda menyetujui <a href="#" class="text-mteblue underline">Privacy Notice</a> kami terkait penggunaan data.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mtenavy text-white py-16 border-t-4 border-mteblue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10">
+            <!-- Company Info -->
+            <div>
+                <a href="index.html" class="inline-block mb-4 bg-white p-2 rounded-sm">
+                    <img src="logo with frame.svg" alt="Logo PT Muara Teknik Elektrik" class="h-14 w-auto">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                    Custom transformer rectifier solutions for industrial electroplating, anodizing, and galvanizing.
+                </p>
+                <div class="text-sm text-gray-300 space-y-2">
+                    <p>PT Muara Teknik Elektrik</p>
+                    <p>Kota Bekasi, Indonesia</p>
+                    <p>Area Layanan: Seluruh Indonesia</p>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-mteblue transition">Home</a></li>
+                    <li><a href="solutions.html" class="hover:text-mteblue transition">Solutions</a></li>
+                    <li><a href="about.html" class="hover:text-mteblue transition">About Us</a></li>
+                    <li><a href="portfolio.html" class="hover:text-mteblue transition">Portfolio</a></li>
+                    <li><a href="articles.html" class="hover:text-mteblue transition">Articles</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Hubungi Kami</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-mteblue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        0852-1552-5453 (WhatsApp)
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-mteblue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        sales@mtelektrik.id
+                    </li>
+                </ul>
+                <div class="mt-6">
+                    <a href="#rfq" class="inline-block border border-mteblue text-mteblue hover:bg-mteblue hover:text-white px-5 py-2 text-sm font-medium rounded-sm transition">
+                        Request Quotation
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 PT Muara Teknik Elektrik. All rights reserved.</p>
+            <div class="mt-2 md:mt-0 space-x-4">
+                <a href="#" class="hover:text-gray-300">Privacy Notice</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285215525453?text=Hello%20PT%20Muara%20Teknik%20Elektrik%2C%0AI%20would%20like%20to%20discuss%20a%20transformer%20rectifier%20requirement%20for%20our%20industrial%20application." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition duration-300 z-50 flex items-center justify-center animate-bounce">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
