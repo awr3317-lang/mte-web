@@ -1,0 +1,24 @@
+[
+  {
+    "date": "2026-07-28",
+    "scope": "app",
+    "genre": "modern-minimal",
+    "theme": "custom",
+    "theme_axes": "light / display-condensed-bold / warm",
+    "vibe": "heavy industrial machinery, raw steel, copper coils",
+    "macrostructure": "SaaS / API Product",
+    "nav": "N13 Inline ⌘K search pill",
+    "footer": "Ft2 Inline rule single line",
+    "brief": "PT Muara Teknik Elektrik industrial look redesign"
+  },
+  {
+    "date": "2026-07-28",
+    "scope": "app",
+    "genre": "modern-minimal",
+    "theme": "Cobalt",
+    "macrostructure": "SaaS / API Product",
+    "nav": "N13 Inline ⌘K search pill",
+    "footer": "Ft2 Inline rule single line",
+    "brief": "PT Muara Teknik Elektrik B2B marketing website redesign"
+  }
+]

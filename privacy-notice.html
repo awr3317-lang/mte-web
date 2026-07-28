@@ -4,24 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Notice - PT Muara Teknik Elektrik</title>
+    <link rel="stylesheet" href="tokens.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mtepaper: 'oklch(96.5% 0.005 48)',
+                        mtepaper2: 'oklch(94.5% 0.006 48)',
+                        mteink: 'oklch(20.0% 0.012 48)',
+                        mteink2: 'oklch(36.0% 0.010 48)',
+                        mterule: 'oklch(88.0% 0.008 48)',
+                        mterule2: 'oklch(80.0% 0.012 48)',
+                        mteaccent: 'oklch(68.0% 0.170 48)',
+                    },
+                    fontFamily: {
+                        display: ['"Barlow Condensed"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans p-8">
-    <div class="max-w-3xl mx-auto bg-white p-12 shadow-sm border border-gray-200">
-        <h1 class="text-3xl font-bold text-gray-900 mb-6">Privacy Notice</h1>
-        <p class="mb-4">PT Muara Teknik Elektrik menghargai privasi Anda. Halaman ini menjelaskan bagaimana kami mengelola informasi yang Anda kirimkan melalui formulir di website kami.</p>
+<body class="bg-mtepaper text-mteink2 font-body p-8 sm:p-12 selection:bg-mteaccent selection:text-white">
+    <div class="max-w-3xl mx-auto bg-white p-8 sm:p-16 border border-mterule-2 rounded-card shadow-sm">
+        <h1 class="text-3xl font-extrabold text-mteink mb-6 uppercase">Privacy Notice</h1>
+        <p class="mb-6 leading-relaxed">PT Muara Teknik Elektrik menghargai privasi Anda. Halaman ini menjelaskan bagaimana kami mengelola informasi yang Anda kirimkan melalui formulir di website kami.</p>
         
-        <h2 class="text-xl font-bold mt-8 mb-3">1. Data yang Kami Kumpulkan</h2>
-        <p class="mb-4">Kami mengumpulkan data seperti nama, nama perusahaan, email, nomor WhatsApp, serta rincian teknis proyek yang Anda isi dalam formulir Request Quotation[span_2](start_span)[span_2](end_span).</p>
+        <h2 class="text-xl font-bold text-mteink mt-8 mb-3 uppercase">1. Data yang Kami Kumpulkan</h2>
+        <p class="mb-6 leading-relaxed">Kami mengumpulkan data seperti nama, nama perusahaan, email, nomor WhatsApp, serta rincian teknis proyek yang Anda isi dalam formulir Request Quotation.</p>
         
-        <h2 class="text-xl font-bold mt-8 mb-3">2. Penggunaan Data</h2>
-        <p class="mb-4">Data yang Anda berikan hanya digunakan untuk tujuan komunikasi bisnis, peninjauan teknis kebutuhan proyek, serta pengiriman penawaran harga (quotation) oleh tim kami[span_3](start_span)[span_3](end_span).</p>
+        <h2 class="text-xl font-bold text-mteink mt-8 mb-3 uppercase">2. Penggunaan Data</h2>
+        <p class="mb-6 leading-relaxed">Data yang Anda berikan hanya digunakan untuk tujuan komunikasi bisnis, peninjauan teknis kebutuhan proyek, serta pengiriman penawaran harga (quotation) oleh tim kami.</p>
         
-        <h2 class="text-xl font-bold mt-8 mb-3">3. Keamanan Data</h2>
-        <p class="mb-4">Kami berkomitmen untuk menjaga kerahasiaan data Anda dan tidak akan menyebarkannya kepada pihak ketiga tanpa izin Anda.</p>
+        <h2 class="text-xl font-bold text-mteink mt-8 mb-3 uppercase">3. Keamanan Data</h2>
+        <p class="mb-6 leading-relaxed">Kami berkomitmen untuk menjaga kerahasiaan data Anda dan tidak akan menyebarkannya kepada pihak ketiga tanpa izin Anda.</p>
         
-        <div class="mt-10 pt-6 border-t border-gray-200">
-            <a href="index.html#rfq" class="text-blue-600 hover:underline">&larr; Kembali ke halaman utama</a>
+        <div class="mt-12 pt-6 border-t border-mterule">
+            <a href="index.html#rfq" class="text-mteaccent font-bold hover:underline inline-flex items-center gap-1 text-sm uppercase font-mono">&larr; Kembali ke halaman utama</a>
         </div>
     </div>
 </body>
