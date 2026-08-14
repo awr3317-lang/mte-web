@@ -1,4 +1,5 @@
-User-agent: *
+User-Agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://mtelektrik.id/sitemap.xml
+Sitemap: https://www.mtelektrik.id/sitemap.xml
