@@ -2,8 +2,10 @@ backend:
   name: github
   repo: awr3317-lang/mte-web
   branch: main
+  base_url: https://mte-cms-oauth.adm-ipul.workers.dev
+  auth_endpoint: auth
 
-local_backend: true
+# local_backend: true
 
 locale: "id"
 site_url: "https://www.mtelektrik.id"
