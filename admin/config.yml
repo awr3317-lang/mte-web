@@ -1,0 +1,147 @@
+backend:
+  name: github
+  repo: awr3317-lang/mte-web
+  branch: main
+
+local_backend: true
+
+locale: "id"
+site_url: "https://www.mtelektrik.id"
+display_url: "https://www.mtelektrik.id"
+show_preview_links: false
+
+logo:
+  src: "/images/brand/logo.webp"
+  show_in_header: true
+
+media_folder: "public/images/articles"
+public_folder: "/images/articles"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: "articles"
+    label: "Artikel Website"
+    label_singular: "Artikel"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{publishedAt}}"
+    sortable_fields: ["title"]
+    fields:
+      - label: "Judul artikel"
+        name: "title"
+        widget: "string"
+        hint: "Tulis judul yang jelas dan langsung menjelaskan isi artikel."
+
+      - label: "Ringkasan singkat"
+        name: "excerpt"
+        widget: "text"
+        hint: "Tulis 1–2 kalimat, idealnya 150–160 karakter. Ringkasan ini juga dipakai di hasil pencarian Google."
+
+      - label: "Foto utama"
+        name: "image"
+        widget: "image"
+        default: "/images/rectifier/oil-cooled-rectifier.webp"
+        choose_url: false
+        hint: "Pilih foto produk atau proyek MTE yang relevan dan jelas."
+
+      - label: "Kategori artikel"
+        name: "category"
+        widget: "select2"
+        options:
+          - label: "Rectifier Systems"
+            value: "Rectifier Systems"
+          - label: "Power Electronics — Rectigate & Kontrol SCR"
+            value: "Power Electronics"
+          - label: "Electrical Panels — Capacitor Bank & Panel"
+            value: "Electrical Panels & Power Quality"
+        hint: "Pilih satu kategori yang paling sesuai dengan topik artikel."
+
+      - label: "Tanggal publikasi"
+        name: "publishedAt"
+        widget: "string"
+        hint: "Tulis dengan format seperti: 25 Agustus 2026."
+
+      - label: "Isi artikel"
+        name: "body"
+        widget: "markdown"
+        hint: "Gunakan Heading 2 untuk judul bagian, Bold untuk penekanan, dan daftar berpoin untuk rincian."
+
+      - label: "Estimasi waktu baca"
+        name: "readTime"
+        widget: "string"
+        default: "5 menit baca"
+        hint: "Contoh: 5 menit baca."
+
+      - label: "Nama penulis"
+        name: "author"
+        widget: "string"
+        default: "Tim Sales Engineer MT Elektrik"
+        hint: "Gunakan nama penulis atau nama tim resmi MTE."
+
+      - label: "Alamat halaman (slug) — lanjutan"
+        name: "slug"
+        widget: "string"
+        required: false
+        hint: "Boleh dikosongkan. Jangan ubah setelah artikel terbit kecuali alamat halaman memang harus diganti."
+
+      - label: "Kode kategori — lanjutan"
+        name: "categorySlug"
+        widget: "select2"
+        options:
+          - label: "rectifier — untuk Rectifier Systems"
+            value: "rectifier"
+          - label: "power-electronics — untuk Power Electronics"
+            value: "power-electronics"
+          - label: "electrical-panels — untuk Electrical Panels"
+            value: "electrical-panels"
+        hint: "Samakan kode ini dengan kategori artikel yang dipilih di atas."
+
+      - label: "Kata kunci pencarian — lanjutan"
+        name: "keywords"
+        widget: "list"
+        collapsed: true
+        minimize_collapsed: true
+        label_singular: "Kata kunci"
+        field: { label: "Kata kunci", name: "keyword", widget: "string" }
+        hint: "Tambahkan istilah pencarian yang benar-benar sesuai dengan isi artikel."
+
+      - label: "Halaman produk terkait"
+        name: "relatedProductSlug"
+        widget: "select2"
+        options:
+          - label: "Oil Cooled SCR Rectifier (/products/rectifier/oil-cooled)"
+            value: "/products/rectifier/oil-cooled"
+          - label: "Air Cooled Rectifier (/products/rectifier/air-cooled)"
+            value: "/products/rectifier/air-cooled"
+          - label: "Rectigate A3000-SMR-3P (/products/power-electronics/rectigate)"
+            value: "/products/power-electronics/rectigate"
+          - label: "Capacitor Bank Panel (/products/electrical-panels/capacitor-bank)"
+            value: "/products/electrical-panels/capacitor-bank"
+          - label: "Sistem Rectifier General (/products/rectifier)"
+            value: "/products/rectifier"
+        hint: "Pilih halaman produk yang akan ditawarkan setelah pembaca selesai membaca."
+
+      - label: "Nama produk pada tombol"
+        name: "relatedProductTitle"
+        widget: "string"
+        default: "Oil Cooled SCR Rectifier"
+        hint: "Teks ini tampil pada bagian konsultasi di akhir artikel."
+
+      - label: "Tanya jawab teknis (FAQ)"
+        name: "faqs"
+        widget: "list"
+        required: false
+        collapsed: true
+        minimize_collapsed: true
+        label_singular: "Pertanyaan dan jawaban"
+        summary: "{{fields.question}}"
+        hint: "Tambahkan hanya pertanyaan yang benar-benar dijawab oleh isi artikel."
+        fields:
+          - { label: "Pertanyaan", name: "question", widget: "string" }
+          - { label: "Jawaban", name: "answer", widget: "text", hint: "Tulis jawaban yang faktual, jelas, dan tidak membuat klaim tanpa sumber." }

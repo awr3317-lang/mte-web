@@ -1,0 +1,758 @@
+:root {
+  color-scheme: light;
+  --mte-blue: #0f4c81;
+  --mte-accent: #0066cc;
+  --mte-navy: #0b192c;
+  --mte-text: #172033;
+  --mte-muted: #5f6b7a;
+  --mte-line: #d8e0e8;
+  --mte-surface: #ffffff;
+  --mte-canvas: #f4f7fa;
+  --mte-danger: #b42318;
+  --mte-radius: 10px;
+  --mte-shadow: 0 8px 24px rgba(11, 25, 44, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#nc-root {
+  min-height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--mte-canvas) !important;
+  color: var(--mte-text) !important;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 15px;
+}
+
+button,
+a,
+input,
+textarea,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid rgba(0, 102, 204, 0.3) !important;
+  outline-offset: 2px !important;
+}
+
+/* Login */
+section[class*="StyledAuthenticationPage"] {
+  min-height: 100vh !important;
+  gap: 24px !important;
+  padding: 32px !important;
+  background:
+    linear-gradient(90deg, var(--mte-navy) 0 10px, transparent 10px),
+    var(--mte-canvas) !important;
+}
+
+section[class*="StyledAuthenticationPage"]::before {
+  content: "CONTENT MANAGER";
+  color: var(--mte-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+section[class*="StyledAuthenticationPage"]::after {
+  content: "Kelola artikel dan media website PT Muara Teknik Elektrik";
+  max-width: 320px;
+  color: var(--mte-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+section[class*="StyledAuthenticationPage"] [class*="Logo"] {
+  max-width: 280px !important;
+  height: auto !important;
+}
+
+section[class*="StyledAuthenticationPage"] button[class*="LoginButton"] {
+  min-width: 180px !important;
+  min-height: 46px !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 22px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: var(--mte-blue) !important;
+  box-shadow: 0 6px 16px rgba(15, 76, 129, 0.2) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+section[class*="StyledAuthenticationPage"] button[class*="LoginButton"]:hover {
+  background: #0b3c68 !important;
+}
+
+/* Shared header */
+header[class*="AppHeader"] {
+  min-height: 64px !important;
+  padding: 0 24px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: var(--mte-navy) !important;
+  box-shadow: 0 3px 12px rgba(11, 25, 44, 0.16) !important;
+}
+
+[class*="AppHeaderContent"] {
+  max-width: 1500px !important;
+  min-height: 64px !important;
+  margin: 0 auto !important;
+}
+
+[class*="AppHeader"] a,
+[class*="AppHeader"] button,
+[class*="AppHeader"] [role="button"] {
+  min-height: 42px !important;
+  border-radius: 7px !important;
+  color: #e6edf5 !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+}
+
+[class*="AppHeader"] a:hover,
+[class*="AppHeader"] button:hover,
+[class*="AppHeader"] [role="button"]:hover,
+[class*="AppHeader"] .header-link-active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+[class*="AppHeader"] img {
+  width: 100% !important;
+  max-width: 120px !important;
+  max-height: 34px !important;
+  object-fit: contain !important;
+}
+
+[class*="AppHeaderLogo"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 46px !important;
+  height: 42px !important;
+  margin-right: 8px !important;
+  padding: 4px 8px !important;
+  border-radius: 7px !important;
+  background: #fff !important;
+}
+
+/* Content dashboard */
+[class*="AppMainContainer"] {
+  background: var(--mte-canvas) !important;
+}
+
+[class*="CollectionContainer"] {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+  width: min(1440px, calc(100% - 40px)) !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 28px 0 48px !important;
+}
+
+aside[class*="SidebarContainer"] {
+  position: sticky !important;
+  top: 92px !important;
+  flex: 0 0 250px !important;
+  width: 250px !important;
+  align-self: start !important;
+  overflow: hidden !important;
+  border: 1px solid var(--mte-line) !important;
+  border-radius: var(--mte-radius) !important;
+  background: var(--mte-surface) !important;
+  box-shadow: none !important;
+  color: var(--mte-text) !important;
+}
+
+[class*="SidebarHeading"] {
+  margin: 0 !important;
+  padding: 20px 18px 12px !important;
+  color: var(--mte-text) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+[class*="SearchContainer"] {
+  margin: 0 14px 14px !important;
+}
+
+[class*="SearchInput"],
+input[type="search"] {
+  min-height: 44px !important;
+  border: 1px solid var(--mte-line) !important;
+  border-radius: 8px !important;
+  background: #f8fafc !important;
+  color: var(--mte-text) !important;
+  font-size: 14px !important;
+}
+
+[class*="SidebarNavList"] {
+  padding: 0 10px 12px !important;
+}
+
+[class*="SidebarNavLink"] {
+  min-height: 46px !important;
+  margin: 3px 0 !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  color: var(--mte-muted) !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+}
+
+[class*="SidebarNavLink"]:hover,
+[class*="SidebarNavLink"].sidebar-active {
+  background: #eaf3fb !important;
+  color: var(--mte-blue) !important;
+}
+
+main[class*="CollectionMain"] {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+[class*="CollectionTopContainer"] {
+  width: 100% !important;
+  margin: 0 0 16px !important;
+  padding: 18px 20px !important;
+  border: 1px solid var(--mte-line) !important;
+  border-radius: var(--mte-radius) !important;
+  background: var(--mte-surface) !important;
+  box-shadow: none !important;
+}
+
+[class*="CollectionTopHeading"] {
+  color: var(--mte-text) !important;
+  font-size: clamp(22px, 2.4vw, 30px) !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.025em !important;
+}
+
+a[class*="CollectionTopNewButton"] {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: var(--mte-blue) !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+a[class*="CollectionTopNewButton"]:hover {
+  background: #0b3c68 !important;
+}
+
+[class*="CollectionControlsContainer"] {
+  min-height: 48px !important;
+  padding: 4px 8px !important;
+  color: var(--mte-muted) !important;
+}
+
+[class*="CardsGrid"] {
+  width: 100% !important;
+  gap: 10px !important;
+}
+
+li[class*="ListCard"] {
+  width: 100% !important;
+  overflow: hidden !important;
+  border: 1px solid var(--mte-line) !important;
+  border-radius: var(--mte-radius) !important;
+  background: var(--mte-surface) !important;
+  box-shadow: none !important;
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease !important;
+}
+
+li[class*="ListCard"]:hover {
+  transform: translateY(-1px) !important;
+  border-color: #a9bfd2 !important;
+  box-shadow: var(--mte-shadow) !important;
+}
+
+[class*="ListCardLink"] {
+  min-height: 68px !important;
+  padding: 17px 20px !important;
+}
+
+[class*="ListCardTitle"] {
+  color: var(--mte-text) !important;
+  font-size: 15px !important;
+  font-weight: 650 !important;
+  line-height: 1.5 !important;
+}
+
+/* Article editor */
+[class*="EditorContainer"] {
+  background: var(--mte-canvas) !important;
+}
+
+[class*="ToolbarContainer"] {
+  min-height: 64px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mte-line) !important;
+  background: var(--mte-surface) !important;
+  box-shadow: 0 3px 12px rgba(11, 25, 44, 0.06) !important;
+}
+
+[class*="ToolbarContainer"] button,
+[class*="ToolbarContainer"] [role="button"] {
+  min-height: 40px !important;
+  border-radius: 7px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+[class*="ToolbarSectionBackLink"] {
+  color: var(--mte-text) !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+}
+
+[class*="ToolbarSectionBackLink"] > :last-child {
+  color: #287a3f !important;
+  font-weight: 750 !important;
+}
+
+[class*="PublishedToolbarButton"],
+[class*="PublishButton"],
+[class*="SaveButton"] {
+  border-color: #c7ddeb !important;
+  background: #e9f5fb !important;
+  color: var(--mte-blue) !important;
+}
+
+[class*="PreviewButtonContainer"] {
+  display: none !important;
+}
+
+button[class*="DeleteButton"] {
+  color: var(--mte-danger) !important;
+}
+
+[class*="Editor"] .SplitPane {
+  border: 0 !important;
+  background: var(--mte-canvas) !important;
+  box-shadow: none !important;
+}
+
+[class*="ControlPaneContainer"] {
+  padding: 26px clamp(18px, 3vw, 38px) 70px !important;
+  background: var(--mte-canvas) !important;
+}
+
+[class*="ControlContainer"] {
+  margin: 0 0 14px !important;
+  padding: 18px !important;
+  border: 1px solid var(--mte-line) !important;
+  border-radius: var(--mte-radius) !important;
+  background: var(--mte-surface) !important;
+  box-shadow: none !important;
+}
+
+[class*="ControlContainer"]:focus-within {
+  border-color: #8bb3d4 !important;
+  box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1) !important;
+}
+
+label[class*="FieldLabel"],
+div[class*="FieldLabel"] {
+  display: block !important;
+  margin: 0 0 9px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--mte-text) !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.4 !important;
+  text-transform: none !important;
+}
+
+p[class*="ControlHint"],
+p[class*="FieldHint"],
+span[class*="FieldHint"] {
+  margin: 9px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--mte-muted) !important;
+  font-size: 12px !important;
+  font-weight: 450 !important;
+  line-height: 1.55 !important;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime-local"],
+textarea,
+[class*="TextControl"] {
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #b9c5d1 !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  color: var(--mte-text) !important;
+  font: inherit !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+textarea,
+[class*="TextControl"] {
+  min-height: 108px !important;
+  resize: vertical !important;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus,
+[class*="TextControl"]:focus {
+  border-color: var(--mte-accent) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.12) !important;
+}
+
+[class$="-control"] {
+  min-height: 44px !important;
+  border-color: #b9c5d1 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+[class$="-control"]:hover {
+  border-color: var(--mte-accent) !important;
+}
+
+[class$="-control"] input {
+  width: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Select2 dropdowns */
+.select2-container {
+  width: 100% !important;
+  font-size: 14px !important;
+}
+
+.select2-container .select2-selection--single {
+  height: 44px !important;
+  border: 1px solid #b9c5d1 !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 7px 38px 7px 12px !important;
+  color: var(--mte-text) !important;
+  line-height: 28px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+  top: 8px !important;
+  right: 8px !important;
+}
+
+.select2-container--open .select2-selection--single {
+  border-color: var(--mte-accent) !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.12) !important;
+}
+
+.select2-dropdown {
+  overflow: hidden !important;
+  border: 1px solid #8bb3d4 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 24px rgba(11, 25, 44, 0.14) !important;
+}
+
+.select2-search--dropdown {
+  padding: 8px !important;
+}
+
+.select2-search--dropdown .select2-search__field {
+  min-height: 40px !important;
+  padding: 8px 10px !important;
+  border: 1px solid #b9c5d1 !important;
+  border-radius: 6px !important;
+  outline: 0 !important;
+}
+
+.select2-results__option {
+  padding: 10px 12px !important;
+  color: var(--mte-text) !important;
+  line-height: 1.45 !important;
+}
+
+.select2-results__option--highlighted[aria-selected] {
+  background: var(--mte-accent) !important;
+  color: #fff !important;
+}
+
+.select2-results__option[aria-selected="true"] {
+  background: #e9f5fb !important;
+  color: var(--mte-blue) !important;
+  font-weight: 700 !important;
+}
+
+[class*="DateTimeControl"] {
+  gap: 10px !important;
+}
+
+[class*="DateTimeControl"] button,
+[class*="FileWidgetButton"],
+[class*="AddButton"] {
+  min-height: 40px !important;
+  border-radius: 7px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+button[class*="AddButton"] {
+  width: 100% !important;
+  margin-top: 8px !important;
+  border: 1px solid #9abbd6 !important;
+  background: #f2f7fb !important;
+  color: var(--mte-blue) !important;
+}
+
+[class*="ListItem"] {
+  border-color: var(--mte-line) !important;
+  border-radius: 8px !important;
+}
+
+[class*="EditorControlBar"],
+[class*="cms-editor"] [class*="ToolbarContainer"] {
+  border: 1px solid var(--mte-line) !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: #f8fafc !important;
+  box-shadow: none !important;
+}
+
+.cms-editor-visual,
+[class*="EditorControlBar"] + div {
+  min-height: 360px !important;
+  border-color: var(--mte-line) !important;
+  background: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+[class*="PreviewPaneContainer"] {
+  background: #edf1f5 !important;
+}
+
+/* Media library */
+.ReactModal__Overlay {
+  padding: 24px !important;
+  background: rgba(11, 25, 44, 0.64) !important;
+}
+
+[class*="StyledModal"] {
+  width: min(1180px, calc(100vw - 48px)) !important;
+  max-height: calc(100vh - 48px) !important;
+  padding: 24px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  box-shadow: 0 24px 70px rgba(11, 25, 44, 0.28) !important;
+}
+
+[class*="StyledModal"] h1 {
+  color: var(--mte-text) !important;
+  font-size: 24px !important;
+  font-weight: 750 !important;
+}
+
+[class*="StyledModal"] button,
+[class*="StyledModal"] label[role="button"],
+[class*="StyledModal"] .nc-fileUploadButton {
+  min-height: 42px !important;
+  border-radius: 7px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+[class*="CardGridContainer"] {
+  gap: 16px !important;
+  padding-top: 18px !important;
+}
+
+[class*="CardImageWrapper"] {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+[class*="CardText"] {
+  padding: 12px !important;
+  color: var(--mte-muted) !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 900px) {
+  header[class*="AppHeader"] {
+    min-height: 58px !important;
+    padding: 0 12px !important;
+  }
+
+  [class*="AppHeaderContent"] {
+    min-height: 58px !important;
+  }
+
+  [class*="CollectionContainer"] {
+    display: block !important;
+    width: calc(100% - 24px) !important;
+    padding: 16px 0 32px !important;
+  }
+
+  aside[class*="SidebarContainer"] {
+    position: static !important;
+    margin-bottom: 16px !important;
+  }
+
+  [class*="CollectionTopContainer"] {
+    padding: 15px !important;
+  }
+
+  [class*="CollectionTopRow"] {
+    gap: 12px !important;
+  }
+
+  [class*="ToolbarContainer"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 58px !important;
+  }
+
+  [class*="EditorContainer"],
+  [class*="StyledSplitPane"],
+  [class*="ControlPaneContainer"],
+  [class*="Editor"] .SplitPane,
+  [class*="Editor"] .Pane1 {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  [class*="ControlPaneContainer"] {
+    padding: 16px 12px 60px !important;
+  }
+
+  [class*="ControlContainer"] {
+    padding: 15px !important;
+  }
+
+  [class*="Editor"] .SplitPane.vertical {
+    width: 100% !important;
+  }
+
+  [class*="Editor"] .Pane1 {
+    display: block !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  [class*="Editor"] .Pane2,
+  [class*="Editor"] .Resizer,
+  [class*="Editor"] [class*="ViewControls"] {
+    display: none !important;
+  }
+
+  .ReactModal__Overlay {
+    padding: 8px !important;
+  }
+
+  [class*="StyledModal"] {
+    width: calc(100vw - 16px) !important;
+    max-height: calc(100vh - 16px) !important;
+    padding: 18px 14px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  [class*="AppHeaderLogo"],
+  a[href^="https://www.mtelektrik.id"] {
+    display: none !important;
+  }
+
+  [class*="AppHeader"] [class*="QuickNewButton"] {
+    display: none !important;
+  }
+
+  [class*="EditorContainer"] button[class*="DeleteButton"] {
+    display: none !important;
+  }
+
+  [class*="AppHeader"] a,
+  [class*="AppHeader"] button,
+  [class*="AppHeader"] [role="button"] {
+    padding-inline: 9px !important;
+    font-size: 13px !important;
+  }
+
+  [class*="CollectionTopRow"] {
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+
+  a[class*="CollectionTopNewButton"] {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  [class*="ListCardLink"] {
+    min-height: 60px !important;
+    padding: 14px 15px !important;
+  }
+
+  [class*="ToolbarSectionBackLink"] {
+    max-width: 180px !important;
+  }
+
+  [class*="DateTimeControl"] {
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
