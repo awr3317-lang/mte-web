@@ -2,6 +2,9 @@ backend:
   name: github
   repo: awr3317-lang/mte-web
   branch: main
+  base_url: https://web-mte.netlify.app
+  auth_endpoint: /.netlify/builders/auth
+
 
 local_backend: true
 
@@ -52,7 +55,7 @@ collections:
 
       - label: "Kategori artikel"
         name: "category"
-        widget: "select2"
+        widget: "select"
         options:
           - label: "Rectifier Systems"
             value: "Rectifier Systems"
@@ -92,7 +95,7 @@ collections:
 
       - label: "Kode kategori — lanjutan"
         name: "categorySlug"
-        widget: "select2"
+        widget: "select"
         options:
           - label: "rectifier — untuk Rectifier Systems"
             value: "rectifier"
@@ -113,7 +116,7 @@ collections:
 
       - label: "Halaman produk terkait"
         name: "relatedProductSlug"
-        widget: "select2"
+        widget: "select"
         options:
           - label: "Oil Cooled SCR Rectifier (/products/rectifier/oil-cooled)"
             value: "/products/rectifier/oil-cooled"
