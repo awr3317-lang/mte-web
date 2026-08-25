@@ -35,7 +35,7 @@ collections:
     extension: "md"
     format: "frontmatter"
     summary: "{{title}} — {{publishedAt}}"
-    sortable_fields: ["title"]
+    sortable_fields: ["publishedAt", "title"]
     fields:
       - label: "Judul artikel"
         name: "title"
