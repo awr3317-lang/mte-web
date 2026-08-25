@@ -2,8 +2,9 @@ backend:
   name: github
   repo: awr3317-lang/mte-web
   branch: main
-  base_url: https://web-mte.netlify.app
-  auth_endpoint: /.netlify/builders/auth
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_id: web-mte.netlify.app
 
 
 local_backend: true
