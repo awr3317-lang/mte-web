@@ -32,7 +32,8 @@ collections:
     folder: "content/articles"
     create: true
     slug: "{{slug}}"
-    format: "yaml-frontmatter"
+    extension: "md"
+    format: "frontmatter"
     summary: "{{title}} — {{publishedAt}}"
     sortable_fields: ["title"]
     fields:
