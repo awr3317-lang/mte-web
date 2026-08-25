@@ -4,6 +4,7 @@ backend:
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
+  site_domain: web-mte.netlify.app
   site_id: web-mte.netlify.app
 
 
