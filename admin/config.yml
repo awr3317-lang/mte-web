@@ -47,12 +47,12 @@ collections:
         widget: "text"
         hint: "Tulis 1–2 kalimat, idealnya 150–160 karakter. Ringkasan ini juga dipakai di hasil pencarian Google."
 
-      - label: "Foto utama"
+      - label: "Foto utama (Wajib .webp)"
         name: "image"
         widget: "image"
         default: "/images/rectifier/oil-cooled-rectifier.webp"
         choose_url: false
-        hint: "Pilih foto produk atau proyek MTE yang relevan dan jelas."
+        hint: "WAJIB menggunakan file berformat WebP (.webp) di bawah 200KB demi kecepatan & SEO Google. Gunakan alat konversi gratis: https://squoosh.app/ atau https://ezgif.com/jpg-to-webp"
 
       - label: "Kategori artikel"
         name: "category"
