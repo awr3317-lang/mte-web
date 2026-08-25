@@ -1,13 +1,13 @@
 ---
 title: "Esse ut neque quas "
-slug: "esse-ut-neque-quas"
-category: Rectifier Systems
-categorySlug: power-electronics
 excerpt: Ut quis similique et
+image: /images/articles/screenshot-2026-08-21-at-11.29.06.png
+category: Rectifier Systems
 publishedAt: Ipsa aut aperiam au
 readTime: Vero veritatis autem
 author: Provident sequi per
-image: /images/articles/screenshot-2026-08-21-at-21.07.38.png
+slug: esse-ut-neque-quas
+categorySlug: power-electronics
 relatedProductSlug: Alias in ipsum dolo
 relatedProductTitle: Est quis molestiae m
 ---
