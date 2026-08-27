@@ -1,0 +1,10 @@
+ini adalah foto proses perbaikan trafo rectifier PT KORIN LIVING ART
+spesifikasinya : 2000A dengan pendingin udara
+diperbaiki pada tanggal 8 Januari 2026
+
+Komponen yang diganti : 
+1. Mainboard controller nya diganti menggunakan rectigate
+2. Dioda stud nya full set 12Pcs
+3. Kabel control.
+4. SCR module
+5. Cooling fan
